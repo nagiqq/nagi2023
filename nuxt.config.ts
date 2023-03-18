@@ -1,7 +1,13 @@
 import { defineNuxtConfig } from 'nuxt/config'
 
 export default defineNuxtConfig({
-  css: ['vuetify/lib/styles/main.sass', '@mdi/font/css/materialdesignicons.min.css'],
+  css: [
+    'virtual:windi-base.css',
+    'virtual:windi-components.css',
+    'virtual:windi-utilities.css',
+    'vuetify/lib/styles/main.sass',
+    '@mdi/font/css/materialdesignicons.min.css'
+  ],
 
   build: {
     transpile: ['vuetify']

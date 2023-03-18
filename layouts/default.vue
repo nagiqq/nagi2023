@@ -1,75 +1,35 @@
 <template>
-  <v-avatar color="surface-variant"><img src="/assets/logo1.png"></v-avatar>
-  <v-card>
-    <v-tabs
-        v-model="tab"
-        color="deep-purple-accent-4"
-        align-tabs="center"
-    >
-      <v-tab :value="1">目錄</v-tab>
-      <v-tab :value="2">程式語言</v-tab>
-      <v-tab :value="3">心情隨筆</v-tab>
-      <v-tab :value="3">關於</v-tab>
-    </v-tabs>
-    <v-window v-model="tab">
-      <v-window-item
-          v-for="n in 3"
-          :key="n"
-          :value="n"
-      >
-        <v-container fluid>
-          <v-row justify="center">
-            <v-col cols="8" v-for="i in 6">
-              <v-card
-                  color="#1F7087"
-                  theme="dark"
-              >
-
-                <v-container fluid>
-                <v-row >
-                    <v-col cols="8">
-                      <div>
-                        <v-card-title class="text-h5">
-                          Supermodel
-                        </v-card-title>
-
-                        <v-card-subtitle class="d-inline-block text-truncate"
-                        >Foster the People Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid consequatur
-                          culpa delectus, doloremque error exercitationem harum, magnam numquam odio optio praesentium, quae
-                          recusandae reiciendis repellendus voluptates! Delectus ea incidunt non.
-                        </v-card-subtitle>
-
-                        <v-card-actions>
-                          <v-btn
-                              class="ms-2"
-                              variant="outlined"
-                              size="small"
-                          >
-                            START RADIO
-                          </v-btn>
-                        </v-card-actions>
-                      </div>
-                    </v-col>
-                    <v-col cols="4">
-                      <v-img
-                          max-width="200"
-                          aspect-ratio="16/9"
-                          cover
-                          src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
-                      ></v-img>
-                    </v-col>
-                  </v-row>
-                </v-container>
-              </v-card>
-            </v-col>
-
-          </v-row>
-        </v-container>
-      </v-window-item>
-    </v-window>
-  </v-card>
-  <slot/>
+  <v-app class="bg-my-blue">
+    <v-container>
+      <v-sheet
+        max-width="500"
+        width="100%"
+        class="mb-4 text-center mx-auto bg-my-blue"
+        ><img src="/nagi2.png"
+      /></v-sheet>
+      <v-card >
+        <v-tabs v-model="tab" class="bg-my-green" color="#EEE" align-tabs="center">
+          <v-tab value="1"><NuxtLink to="/">目錄</NuxtLink></v-tab>
+          <v-tab value="2"><NuxtLink to="/coding">程式語言</NuxtLink></v-tab>
+          <v-tab value="3"><NuxtLink to="/diary">心情隨筆</NuxtLink></v-tab>
+          <v-tab value="4"><NuxtLink to="/about">關於</NuxtLink></v-tab>
+        </v-tabs>
+      </v-card>
+      <slot />
+    </v-container>
+  </v-app>
 </template>
 <script setup>
-const tab = ref('')
+const tab = ref(null)
 </script>
+<style>
+.bg-my-blue{
+  background-color: #09192C;
+}
+.bg-my-green{
+  background-color: #AD7BE9;
+}
+.bg-my-purple{
+  background-color: #AD7BE9;
+}
+</style>
