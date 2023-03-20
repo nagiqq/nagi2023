@@ -9,7 +9,7 @@
         >
           <v-img
               :src="article.img"
-              :lazy-src="`https://picsum.photos/10/6?image=${i * n * 5 + 10}`"
+              lazy-src="https://picsum.photos/10/6?image=1"
               aspect-ratio="1.778"
           ></v-img>
         </v-col>

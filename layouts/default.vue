@@ -7,6 +7,8 @@
         class="mb-4 text-center mx-auto bg-my-blue"
         ><img src="/nagi2.png"
       /></v-sheet>
+      <v-row justify="center">
+      <v-col cols="12" md="10" sm="12" xs="12">
       <v-card >
         <v-tabs v-model="tab" class="bg-my-green" color="#EEE" align-tabs="center">
           <v-tab value="1"><NuxtLink to="/">目錄</NuxtLink></v-tab>
@@ -15,6 +17,8 @@
           <v-tab value="4"><NuxtLink to="/about">關於</NuxtLink></v-tab>
         </v-tabs>
       </v-card>
+      </v-col>
+      </v-row>
       <slot />
     </v-container>
   </v-app>
