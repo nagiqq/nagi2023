@@ -5,17 +5,18 @@
         <v-card color="#3E54AC00" theme="dark">
           <div class="d-flex flex-no-wrap justify-space-between">
             <div class="ma-3">
-              <v-card-title class="text-h5"> {{ article.name }} </v-card-title>
+              <v-card-title class="text-h5"> {{ article.title }} </v-card-title>
 
-              <v-card-text>{{ article.description }}</v-card-text>
+<!--              <v-card-text>{{ article.description }}</v-card-text>-->
 
               <v-card-actions class="justify-end">
                 <v-btn class="end my_action_button" size="small">
-                  <span class="flex"
-                    >前往文章<v-icon icon="mdi-chevron-double-right"></v-icon
-                  ></span>
-                  <hr class="block mt-5px w-full h-5"
-                /></v-btn>
+                  <NuxtLink :to="article._path">
+                    <span class="flex"
+                      >前往文章<v-icon icon="mdi-chevron-double-right"></v-icon
+                    ></span>
+                    <hr class="block mt-5px w-full h-5" /> </NuxtLink
+                ></v-btn>
               </v-card-actions>
             </div>
 
@@ -34,11 +35,15 @@
 </template>
 
 <script setup>
-defineProps({
+const props = defineProps({
   data: {
     type: Object
   }
 })
+// const myData = computed(() => {
+//   return props.data.reverse()
+// })
+
 </script>
 
 <style>
@@ -53,7 +58,8 @@ defineProps({
 }
 .my_action_button.v-btn:hover hr {
   border-color: #ad7be9;
-  animation: appearing 1s cubic-bezier(0.68,-0.55,0.27,1.55) infinite;
+  /*animation: appearing 1s cubic-bezier(0.68,-0.55,0.27,1.55) infinite;*/
+  animation: appearing 1s ease-out infinite;
 }
 
 @keyframes appearing {
