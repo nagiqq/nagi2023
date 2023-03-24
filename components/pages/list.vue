@@ -7,7 +7,7 @@
             <div class="ma-3">
               <v-card-title class="text-h5"> {{ article.title }} </v-card-title>
 
-<!--              <v-card-text>{{ article.description }}</v-card-text>-->
+              <v-card-text>{{ article.description }}</v-card-text>
 
               <v-card-actions class="justify-end">
                 <v-btn class="end my_action_button" size="small">
