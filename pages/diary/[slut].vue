@@ -16,7 +16,7 @@
                 <v-icon start icon="mdi-label"></v-icon>
                 {{ tag }}
               </v-chip>
-              <v-sheet max-width="500" width="100%" class="my-4 text-center mx-auto bg-my-blue">
+              <v-sheet max-width="700" width="100%" class="my-4 text-center mx-auto bg-my-blue">
                 <v-img
                     :src="doc.img"
                     lazy-src="https://picsum.photos/10/6?image=1"
