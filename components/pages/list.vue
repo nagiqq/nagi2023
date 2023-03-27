@@ -4,7 +4,7 @@
       <v-col cols="12" md="10" sm="12" xs="12" v-for="article in data" :key="article._path">
         <v-card color="#3E54AC00" theme="dark">
           <div class="d-flex flex-no-wrap justify-space-between">
-            <div class="ma-3">
+            <div class="ma-3 flex-grow-1">
               <v-card-title class="text-h5"> {{ article.name }} </v-card-title>
 
               <v-card-text>{{ article.description }}</v-card-text>

@@ -22,7 +22,7 @@
                     lazy-src="https://picsum.photos/10/6?image=1"
                     aspect-ratio="1.778"></v-img
                 ></v-sheet>
-              <ContentRenderer :value="doc" class="text-body-1" />
+              <ContentRenderer :value="doc" class="text-body-1 mm-content" />
             </v-card>
           </v-col>
 
@@ -38,6 +38,12 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style>
+img {
+  border-radius: 8px!important;
+}
+.mm-content img{
+  max-width: 500px;
+  margin: 1em auto;
+}
 </style>

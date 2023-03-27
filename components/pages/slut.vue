@@ -20,7 +20,7 @@
                   lazy-src="https://picsum.photos/10/6?image=1"
                   aspect-ratio="1.778"></v-img
               ></v-sheet>
-            <ContentRenderer :value="doc" class="text-body-1" />
+            <ContentRenderer :value="doc" class="text-body-1 mm-content" />
           </v-card>
         </v-col>
 
@@ -35,8 +35,12 @@ defineProps({
 })
 </script>
 
-<style >
+<style>
 img {
-  border-radius: 8px;
+  border-radius: 10px!important;
+}
+.mm-content img{
+  max-width: 300px;
+  margin: 4em auto;
 }
 </style>
