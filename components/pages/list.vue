@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-row justify="center">
+    <v-row justify="center" align="center" class="flex-column-reverse">
       <v-col cols="12" md="10" sm="12" xs="12" v-for="article in data" :key="article._path">
         <v-card color="#3E54AC00" theme="dark">
           <div class="d-flex flex-no-wrap justify-space-between">
