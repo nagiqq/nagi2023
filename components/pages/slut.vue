@@ -42,5 +42,6 @@ img {
 .mm-content img{
   max-width: 300px;
   margin: 4em auto;
+  max-height: 300px;
 }
 </style>

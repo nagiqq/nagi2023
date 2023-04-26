@@ -39,11 +39,5 @@ export default {
 </script>
 
 <style>
-img {
-  border-radius: 8px!important;
-}
-.mm-content img{
-  max-width: 500px;
-  margin: 1em auto;
-}
+
 </style>

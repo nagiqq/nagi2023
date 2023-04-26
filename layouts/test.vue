@@ -1,15 +1,13 @@
 <template>
-<div>
-  <slot/>
-</div>
+  <div class="!bg-transparent">
+    <slot />
+  </div>
 </template>
 
 <script>
 export default {
-  name: "test"
+  name: 'test'
 }
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

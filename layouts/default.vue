@@ -8,32 +8,49 @@
         ><img src="/nagi2.png"
       /></v-sheet>
       <v-row justify="center">
-      <v-col cols="12" md="10" sm="12" xs="12">
-      <v-card >
-        <v-tabs v-model="tab" class="bg-my-green" color="#EEE" align-tabs="center">
-          <v-tab value="1"><NuxtLink to="/">目錄</NuxtLink></v-tab>
-          <v-tab value="2"><NuxtLink to="/coding">程式語言</NuxtLink></v-tab>
-          <v-tab value="3"><NuxtLink to="/diary">心情隨筆</NuxtLink></v-tab>
-          <v-tab value="4"><NuxtLink to="/about">關於</NuxtLink></v-tab>
-        </v-tabs>
-      </v-card>
-      </v-col>
+        <v-col cols="12" md="10" sm="12" xs="12">
+          <v-card>
+            <v-tabs
+              v-model="tab"
+              class="bg-my-green"
+              color="#EEE"
+              align-tabs="center">
+              <v-tab
+                v-for="item in tabs"
+                :value="item.href">
+                <NuxtLink :to="item.href"
+                  >{{ item.name }}
+                </NuxtLink>
+              </v-tab>
+            </v-tabs>
+          </v-card>
+        </v-col>
       </v-row>
       <slot />
     </v-container>
   </v-app>
 </template>
 <script setup>
-const tab = ref(null)
+const tabs = ref([
+  {id: 1, name: '目錄', href: '/'},
+  {id: 2, name: '程式語言', href: '/coding'},
+  {id: 3, name: '心情隨筆', href: '/diary'},
+  {id: 4, name: '關於', href: '/about'}
+])
+const route = useRoute()
+const currentRoute = ref(route.href)
+const tab = ref(currentRoute)
 </script>
 <style>
-.bg-my-blue{
-  background-color: #09192C;
+.bg-my-blue {
+  background-color: #09192c;
 }
-.bg-my-green{
-  background-color: #AD7BE9;
+
+.bg-my-green {
+  background-color: #ad7be9;
 }
-.bg-my-purple{
-  background-color: #AD7BE9;
+
+.bg-my-purple {
+  background-color: #ad7be9;
 }
 </style>

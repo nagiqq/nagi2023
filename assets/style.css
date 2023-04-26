@@ -1,0 +1,26 @@
+img {
+  border-radius: 8px !important;
+}
+
+.mm-content img {
+  max-width: 500px;
+  margin: 1em auto;
+}
+
+.mm-content h2 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.mm-content pre {
+  border-radius: 8px;
+  background: #ad7be9;
+  margin: 1rem;
+  padding: 2rem;
+  overflow-x: scroll;
+}
+/*.mm-content code{*/
+/*  overflow-x: scroll;*/
+/*}*/
