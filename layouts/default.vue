@@ -32,10 +32,10 @@
 </template>
 <script setup>
 const tabs = ref([
-  {id: 1, name: '目錄', href: '/'},
-  {id: 2, name: '程式語言', href: '/coding'},
-  {id: 3, name: '心情隨筆', href: '/diary'},
-  {id: 4, name: '關於', href: '/about'}
+  { id: 1, name: '目錄', href: '/' },
+  { id: 2, name: '程式語言', href: '/coding' },
+  { id: 3, name: '心情隨筆', href: '/diary' },
+  { id: 4, name: '關於', href: '/about' }
 ])
 const route = useRoute()
 const currentRoute = ref(route.href)
@@ -43,14 +43,14 @@ const tab = ref(currentRoute)
 </script>
 <style>
 .bg-my-blue {
-  background-color: #09192c;
+  background-color: #f2d8d8b3;
 }
 
 .bg-my-green {
-  background-color: #ad7be9;
+  background-color: #99a98f;
 }
 
 .bg-my-purple {
-  background-color: #ad7be9;
+  background-color: #5c8984;
 }
 </style>

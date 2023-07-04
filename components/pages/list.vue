@@ -1,26 +1,47 @@
 <template>
   <v-container>
-    <v-row justify="center" align="center" class="flex-column-reverse">
-      <v-col cols="12" md="10" sm="12" xs="12" v-for="article in data" :key="article._path">
-        <v-card color="#3E54AC00" theme="dark">
-          <div class="d-flex flex-no-wrap justify-space-between">
-            <div class="ma-3 flex-grow-1">
-              <v-card-title class="text-h5"> {{ article.name }} </v-card-title>
+    <v-row
+      justify="center"
+      align="center"
+      class="flex-column-reverse">
+      <v-col
+        cols="12"
+        md="8"
+        sm="8"
+        xs="8"
+        v-for="article in data"
+        :key="article._path">
+        <v-card color="#E1ECC8">
+          <div
+            class="d-flex flex-no-wrap justify-space-between">
+            <div class="ma-5 flex-grow-1">
+              <v-card-title class="text-h5">
+                {{ article.name }}
+              </v-card-title>
 
-              <v-card-text>{{ article.description }}</v-card-text>
+              <v-card-text>{{
+                article.description
+              }}</v-card-text>
 
               <v-card-actions class="justify-end">
-                <v-btn class="end my_action_button" size="small">
+                <v-btn
+                  class="end my_action_button"
+                  size="small">
                   <NuxtLink :to="article._path">
                     <span class="flex"
-                      >前往文章<v-icon icon="mdi-chevron-double-right"></v-icon
+                      >前往文章<v-icon
+                        icon="mdi-chevron-double-right"></v-icon
                     ></span>
-                    <hr class="block mt-5px w-full h-5" /> </NuxtLink
+                    <hr
+                      class="block mt-5px w-full h-5" /> </NuxtLink
                 ></v-btn>
               </v-card-actions>
             </div>
 
-            <v-avatar class="mx-3" size="200" rounded="0">
+            <v-avatar
+              class="mx-3"
+              size="200"
+              rounded="0">
               <v-img
                 :src="article.img"
                 lazy-src="https://picsum.photos/10/6?image=1"
@@ -28,7 +49,9 @@
             </v-avatar>
           </div>
         </v-card>
-        <v-divider :thickness="1" class="border-opacity-100"></v-divider>
+        <v-divider
+          :thickness="1"
+          class="border-opacity-100"></v-divider>
       </v-col>
     </v-row>
   </v-container>
@@ -44,6 +67,11 @@ const props = defineProps({
 //   return props.data.reverse()
 // })
 
+window.scrollTo({
+  top: 100,
+  left: 100,
+  behavior: 'smooth'
+})
 </script>
 
 <style>
@@ -75,7 +103,7 @@ const props = defineProps({
   }
 }
 .my_action_button.v-btn:hover {
-  color: #ad7be9;
+  color: #db4d6d;
   /*border-bottom: 1px #AD7BE9 solid;*/
 }
 </style>
